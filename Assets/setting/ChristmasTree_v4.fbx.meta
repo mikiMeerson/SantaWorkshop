@@ -3,10 +3,75 @@ guid: 92318cf6244b4ef469b9602d8ec4356d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_BLUE
+    second: {fileID: 2100000, guid: 2d1392fbc0477f64eab20634da1ad97d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_PBR
+    second: {fileID: 2100000, guid: 22441e9ecd127f840b6f8da12d7c0f99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Red
+    second: {fileID: 2100000, guid: 7fe6db6ca4581464ab2cbdae3b31193c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Snow
+    second: {fileID: 2100000, guid: cdabd9eb647bbc1409554ffe7088a026, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_WHITE
+    second: {fileID: 2100000, guid: 1d29415a8104dde4996637327b6978b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Wood
+    second: {fileID: 2100000, guid: 870da7fbf55b142469599fa6c62842a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_YEL
+    second: {fileID: 2100000, guid: 67ff3f39ae44f534cb278cbcaa8e80ae, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChristmasTree_2021_ball_MAT_Red_BaseColor
+    second: {fileID: 2800000, guid: e92b42a04def3264487677be4415d0e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChristmasTree_2021_ball_MAT_Red_Metallic
+    second: {fileID: 2800000, guid: d50b0e1a467304444884e441fb99b209, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChristmasTree_2021_ball_MAT_Red_Roughness
+    second: {fileID: 2800000, guid: 343ab64d425911b4588ed4271c881f43, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChristmasTree_2021_v2_MAT_TreeWinter_BaseColor
+    second: {fileID: 2800000, guid: 1aa153dc282013a4e9dfeedf33a1c17f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChristmasTree_2021_v2_MAT_TreeWinter_Metallic
+    second: {fileID: 2800000, guid: ed2a9ddbfd7852742b885932f455a762, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChristmasTree_2021_v2_MAT_TreeWinter_Roughness
+    second: {fileID: 2800000, guid: 171a75af0268da0489de2ecedfad845a, type: 3}
   materials:
     materialImportMode: 2
-    materialName: 0
+    materialName: 2
     materialSearch: 1
     materialLocation: 1
   animations:
