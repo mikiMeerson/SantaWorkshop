@@ -29,16 +29,4 @@ public class Player : MonoBehaviour
         warmth += value;
         warmthText.text = $"Warmth: {warmth}";
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

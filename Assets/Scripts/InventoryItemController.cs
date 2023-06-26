@@ -23,6 +23,7 @@ public class InventoryItemController : MonoBehaviour
         switch(item.itemType)
         {
             case Item.ItemType.EnergyPotion:
+                Debug.Log("Here!");
                 Player.instance.IncreaseHealth(10);
                 break;
             case Item.ItemType.WarmthPotion:

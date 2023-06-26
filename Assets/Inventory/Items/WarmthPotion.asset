@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35d31e52b49c5694fba11ed73d418a44, type: 3}
-  m_Name: WarmthPotion 1
+  m_Name: WarmthPotion
   m_EditorClassIdentifier: 
   id: 6
   itemName: Warmth
