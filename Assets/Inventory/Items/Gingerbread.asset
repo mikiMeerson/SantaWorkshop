@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Gingerbread
   value: 0
   icon: {fileID: 21300000, guid: 86fe3cabe72b14bf1b9092f7821222ed, type: 3}
+  itemType: 4

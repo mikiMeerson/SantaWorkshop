@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Candy Cane
   value: 0
   icon: {fileID: 21300000, guid: edf8e8f16fef9444bb94de066813ddca, type: 3}
+  itemType: 3

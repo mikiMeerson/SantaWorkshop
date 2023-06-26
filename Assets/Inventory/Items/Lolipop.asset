@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Lolipop
   value: 0
   icon: {fileID: 21300000, guid: 28524db5fe42c4923b3ad8f3f4fb742c, type: 3}
+  itemType: 5

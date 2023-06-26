@@ -9,6 +9,17 @@ public class Item : ScriptableObject
     public string itemName;
     public int value;
     public Sprite icon;
+    public ItemType itemType;
+
+    public enum ItemType
+    {
+        EnergyPotion,
+        WarmthPotion,
+        FreezePotion,
+        CandyCane,
+        GingerBread,
+        Lolipop
+    }
 
     // Start is called before the first frame update
     void Start()

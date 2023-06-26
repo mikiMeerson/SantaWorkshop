@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Warmth
   value: 10
   icon: {fileID: 21300000, guid: 294acf11d2d2f364485ab4a4be71b1a7, type: 3}
+  itemType: 1

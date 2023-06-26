@@ -17,4 +17,29 @@ public class InventoryItemController : MonoBehaviour
     {
         item = newItem;    
     }
+
+    public void UseItem()
+    {
+        switch(item.itemType)
+        {
+            case Item.ItemType.EnergyPotion:
+                Player.instance.IncreaseHealth(10);
+                break;
+            case Item.ItemType.WarmthPotion:
+                Player.instance.IncreaseWarmth(10);
+                break;
+            case Item.ItemType.FreezePotion:
+                break;
+            case Item.ItemType.CandyCane:
+                break;
+            case Item.ItemType.GingerBread:
+                break;
+            case Item.ItemType.Lolipop:
+                break;
+            default:
+                break;
+        }
+
+        RemoveItem();
+    }
 }

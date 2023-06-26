@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Freeze
   value: 0
   icon: {fileID: 21300000, guid: a4f215e05fc7716429af219ae35c7b35, type: 3}
+  itemType: 2
