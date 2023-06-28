@@ -14,8 +14,11 @@ public class ItemPickUp : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnMouseDown() // TODO canghe to collision with player
+    public void OnTriggerEnter(Collider col)
     {
-        Pickup();
+        if (col.gameObject.tag == "Player")
+        {
+            Pickup();
+        }
     }
 }
