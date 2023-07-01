@@ -4,6 +4,8 @@ using Cinemachine;
 
 public class CameraSwitcher : MonoBehaviour
 {
+    public static CameraSwitcher instance;
+
     [SerializeField]
     private InputAction action;
 
@@ -15,6 +17,7 @@ public class CameraSwitcher : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         animator = GetComponent<Animator>();
         playerRenderers = playerCharacter.GetComponentsInChildren<Renderer>();
     }
@@ -55,5 +58,10 @@ public class CameraSwitcher : MonoBehaviour
         {
             renderer.enabled = thirdPersonCamera;
         }
+    }
+
+    public bool IsThirdPersonCamera()
+    {
+        return thirdPersonCamera;
     }
 }

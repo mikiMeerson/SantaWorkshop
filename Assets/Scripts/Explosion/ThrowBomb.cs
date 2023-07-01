@@ -16,15 +16,12 @@ public class ThrowBomb : MonoBehaviour
     public float throwForce = 70.0f;
     public float throwUpwardForce = 10.0f;
 
-    bool readyToThrow;
-
-    private void Start()
-    {
-        readyToThrow = true;
-    }
+    bool readyToThrow = false;
 
     private void Update()
     {
+        readyToThrow = !CameraSwitcher.instance.IsThirdPersonCamera();
+
         if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
         {
             Throw();
@@ -64,6 +61,6 @@ public class ThrowBomb : MonoBehaviour
 
     private void ResetThrow()
     {
-        readyToThrow = true;
+        readyToThrow = !CameraSwitcher.instance.IsThirdPersonCamera();
     }
 }
