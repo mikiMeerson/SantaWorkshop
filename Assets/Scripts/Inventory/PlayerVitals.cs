@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Player : MonoBehaviour
+public class PlayerVitals : MonoBehaviour
 {
-    public static Player instance;
+    public static PlayerVitals instance;
 
     public int health;
     public int warmth;

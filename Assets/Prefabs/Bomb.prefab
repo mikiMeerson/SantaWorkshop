@@ -227,7 +227,8 @@ GameObject:
   - component: {fileID: 6152666881765303610}
   - component: {fileID: 6335127007921487297}
   - component: {fileID: 2470600096093909876}
-  - component: {fileID: -8596483678361869505}
+  - component: {fileID: 4093939815698406460}
+  - component: {fileID: 8220231733454732761}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -244,13 +245,13 @@ Transform:
   m_GameObject: {fileID: 7427343755604194312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 836.227, y: 0.792, z: 296.0955}
-  m_LocalScale: {x: 1.6011, y: 1.6011, z: 1.6011}
+  m_LocalScale: {x: 2.9172041, y: 2.9172041, z: 2.9172041}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8613207122655617241}
   - {fileID: 8327847203029270195}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4406145837851744358
 MeshFilter:
@@ -344,7 +345,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-8596483678361869505
+--- !u!54 &4093939815698406460
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7427343755604194312}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8220231733454732761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,11 +381,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7427343755604194312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaa8dcb0e3f88e94786a62d324491019, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fcc6d4a7d0c7b647a1488df034592ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   power: 10
-  radius: 5
+  radius: 20
   upForce: 1
   bigExplosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   triggerBombAnimation:

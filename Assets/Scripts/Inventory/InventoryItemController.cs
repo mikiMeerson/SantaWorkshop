@@ -24,10 +24,10 @@ public class InventoryItemController : MonoBehaviour
         {
             case Item.ItemType.EnergyPotion:
                 Debug.Log("Here!");
-                Player.instance.IncreaseHealth(10);
+                PlayerVitals.instance.IncreaseHealth(10);
                 break;
             case Item.ItemType.WarmthPotion:
-                Player.instance.IncreaseWarmth(10);
+                PlayerVitals.instance.IncreaseWarmth(10);
                 break;
             case Item.ItemType.FreezePotion:
                 break;

@@ -11,23 +11,13 @@ public class Explosion : MonoBehaviour
     public GameObject bigExplosionPrefab;
     public UnityEvent triggerBombAnimation;
 
-    void Start()
-    {
-        
-    }
-
-    //void FixedUpdate()
-    //{
-    //    if (gameObject == enabled)
-    //    {
-    //        Invoke("Detonate", 6.5f);
-    //    }
-    //}
-
     public void OnTriggerEnter(Collider other)
     {
-        triggerBombAnimation.Invoke();
-        Invoke("Detonate", 6.5f);
+        if (other.tag != "Player")
+        {
+            triggerBombAnimation.Invoke();
+            Invoke("Detonate", 6.5f);
+        }
     }
 
     void Detonate()
