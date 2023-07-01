@@ -23,11 +23,18 @@ public class InventoryItemController : MonoBehaviour
         switch(item.itemType)
         {
             case Item.ItemType.EnergyPotion:
-                Debug.Log("Here!");
-                PlayerVitals.instance.IncreaseHealth(10);
+                if (PlayerVitals.instance.GetHealthAmount() <= 90)
+                {
+                    PlayerVitals.instance.IncreaseHealth(10);
+                    RemoveItem();
+                }
                 break;
             case Item.ItemType.WarmthPotion:
-                PlayerVitals.instance.IncreaseWarmth(10);
+                if (PlayerVitals.instance.GetWarmthAmount() <= 90)
+                {
+                    PlayerVitals.instance.IncreaseWarmth(10);
+                    RemoveItem();
+                }
                 break;
             case Item.ItemType.FreezePotion:
                 break;
@@ -41,6 +48,5 @@ public class InventoryItemController : MonoBehaviour
                 break;
         }
 
-        RemoveItem();
     }
 }
