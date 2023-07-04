@@ -5,35 +5,29 @@ using TMPro;
 
 public class ThrowBomb : MonoBehaviour
 {
-    public Transform cam;
-    public Transform attackPoint;
+    public static ThrowBomb instance;
     public GameObject objectToThrow;
+    public Transform cam;
 
-    public int totalThrows;
     public float throwCooldown = 2.0f;
 
-    public KeyCode throwKey = KeyCode.Mouse0;
-    public float throwForce = 70.0f;
+    public float throwForce = 50.0f;
     public float throwUpwardForce = 10.0f;
 
     bool readyToThrow = false;
 
-    private void Update()
+    void Awake()
     {
-        readyToThrow = !CameraSwitcher.instance.IsThirdPersonCamera();
-
-        if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
-        {
-            Throw();
-        }
+        instance = this;
+        readyToThrow = true;
     }
 
-    private void Throw()
+    public void Throw()
     {
         readyToThrow = false;
 
         // instantiate object to throw
-        GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
+        GameObject projectile = Instantiate(objectToThrow, transform.position, cam.rotation);
 
         // get rigidbody component
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
@@ -45,7 +39,7 @@ public class ThrowBomb : MonoBehaviour
 
         if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
         {
-            forceDirection = (hit.point - attackPoint.position).normalized;
+            forceDirection = (hit.point - transform.position).normalized;
         }
 
         // add force
@@ -53,14 +47,12 @@ public class ThrowBomb : MonoBehaviour
 
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
-        totalThrows--;
-
         // implement throwCooldown
         Invoke(nameof(ResetThrow), throwCooldown);
     }
 
     private void ResetThrow()
     {
-        readyToThrow = !CameraSwitcher.instance.IsThirdPersonCamera();
+        readyToThrow = true;
     }
 }

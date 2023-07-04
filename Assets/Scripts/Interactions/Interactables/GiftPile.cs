@@ -6,6 +6,6 @@ public class GiftPile : Interactable
 {
     protected override void Interact()
     {
-        Debug.Log("Interacted with " + gameObject.name);
+        ThrowBomb.instance.Throw();
     }
 }

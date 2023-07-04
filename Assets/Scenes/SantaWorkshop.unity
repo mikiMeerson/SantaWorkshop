@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5887,60 +5887,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &361407141 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6532324570728341381, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &361407146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361407141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
---- !u!1 &363392490 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5160871509531484896, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &363392496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363392490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
---- !u!1 &364114333 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5965472178580338212, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &364114338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364114333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!4 &365450680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c8742281d8db35d40a963eb3b93521dc, type: 3}
@@ -6880,24 +6826,55 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &424980418 stripped
+--- !u!1 &425260741
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1099583932970205877, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &424980423
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425260742}
+  - component: {fileID: 425260743}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425260742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425260741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1371912192}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425260743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424980418}
+  m_GameObject: {fileID: 425260741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
+  m_Script: {fileID: 11500000, guid: c31a6085eb9818043b0880d37dbf3f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
+  objectToThrow: {fileID: 7427343755604194312, guid: 685b42d0df31e9041ae38c2c8888e9ab, type: 3}
+  cam: {fileID: 1371912192}
+  throwCooldown: 2
+  throwForce: 70
+  throwUpwardForce: 10
 --- !u!54 &429846238
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7063,12 +7040,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31a6085eb9818043b0880d37dbf3f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 453037577}
-  attackPoint: {fileID: 1332223905}
   objectToThrow: {fileID: 7427343755604194312, guid: 685b42d0df31e9041ae38c2c8888e9ab, type: 3}
-  totalThrows: 10
+  cam: {fileID: 453037577}
   throwCooldown: 2
-  throwKey: 323
   throwForce: 70
   throwUpwardForce: 10
 --- !u!1001 &459381381
@@ -8079,24 +8053,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499239288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
---- !u!1 &502742836 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2677073480137184581, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &502742841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502742836}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
@@ -9121,24 +9077,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4ff4ef0bc60bc0408e08e1c0f0597dc, type: 3}
---- !u!1 &568437221 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 386309538923513816, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &568437226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568437221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1001 &604291027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10517,42 +10455,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &728741298 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1904845972895188027, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &728741303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728741298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
---- !u!1 &728871508 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6168679769892162882, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &728871514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728871508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!136 &729639037
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13866,24 +13768,6 @@ CapsuleCollider:
   m_Height: 0.11942354
   m_Direction: 1
   m_Center: {x: 0.0000038407743, y: -0.000000005587935, z: 0.0107696485}
---- !u!1 &1025014975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5127680699044867840, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1025014980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025014975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1 &1025552287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6259328284723422488, guid: 5160e66d65becad44b53058c02d1e535, type: 3}
@@ -14361,24 +14245,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1058110876 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5076957465058695180, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1058110881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058110876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1001 &1067889117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15835,24 +15701,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 92318cf6244b4ef469b9602d8ec4356d, type: 3}
   m_PrefabInstance: {fileID: 1142849025}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1149246543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4417796470983587238, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1149246548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149246543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1 &1161807839 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4544161482417746753, guid: c8742281d8db35d40a963eb3b93521dc, type: 3}
@@ -17405,24 +17253,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 0, z: 2}
   m_Center: {x: 0.0000038146973, y: 0, z: 0}
---- !u!1 &1279565651 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8375874257520570121, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1279565656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279565651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!136 &1283940069
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17808,24 +17638,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9691035, y: 0.52758545, z: 0.76178265}
   m_Center: {x: 0.0000038146973, y: -0.055348314, z: -0.0000076293945}
---- !u!1 &1320489585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8588159637936406858, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1320489590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320489585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1 &1332223904
 GameObject:
   m_ObjectHideFlags: 0
@@ -18882,6 +18694,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb with E
+--- !u!4 &1371912192 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3107657977904102713, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
+  m_PrefabInstance: {fileID: 2014339677849388310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1381877923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8748768398091176841, guid: c8742281d8db35d40a963eb3b93521dc, type: 3}
@@ -19583,24 +19400,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c2c5d68c17a0a1248b3c31a35d902993, type: 3}
   m_PrefabInstance: {fileID: 1427395150}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1430085242 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2680736448991127187, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1430085247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430085242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!65 &1430343072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21119,24 +20918,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1516599560 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6310163870521673362, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1516599566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516599560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1001 &1528372261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24775,24 +24556,6 @@ CapsuleCollider:
   m_Height: 0.15380219
   m_Direction: 1
   m_Center: {x: -0.0003823042, y: -0.000002939254, z: 0.010769663}
---- !u!1 &1706053528 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1303587701867209873, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1706053533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706053528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1001 &1735774050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25620,24 +25383,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 0, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1806734790 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7449337613245362970, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1806734795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806734790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1 &1814270522 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7900433539094448370, guid: 5160e66d65becad44b53058c02d1e535, type: 3}
@@ -26394,24 +26139,6 @@ CapsuleCollider:
   m_Height: 0.13105623
   m_Direction: 1
   m_Center: {x: 0.000000029802326, y: -0.00070304424, z: 0.010769581}
---- !u!1 &1897395524 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8697734616601764526, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1897395530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897395524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!136 &1902174047
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29969,24 +29696,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072471700}
   m_CullTransparentMesh: 1
---- !u!1 &2075618371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4596243187598871414, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2075618376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075618371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!1 &2084872872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4242956494607194219, guid: 5160e66d65becad44b53058c02d1e535, type: 3}
@@ -31104,24 +30813,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 0, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &2112178797 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6654641841077160410, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-  m_PrefabInstance: {fileID: 1529706360944956967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2112178802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112178797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce10324e38c9084183d63d45a7f4ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Shoot a bomb with E
 --- !u!65 &2118993021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31746,82 +31437,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7430368289667965887, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      propertyPath: promptMessage
-      value: Shoot a bomb with Left Click
-      objectReference: {fileID: 0}
     - target: {fileID: 8946527591895786463, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
       propertyPath: m_Name
       value: giftPile
       objectReference: {fileID: 0}
-    - target: {fileID: 8946527591895786463, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      propertyPath: m_TagString
-      value: Gift
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5160871509531484896, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 363392496}
-    - targetCorrespondingSourceObject: {fileID: 5965472178580338212, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 364114338}
-    - targetCorrespondingSourceObject: {fileID: 1099583932970205877, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 424980423}
-    - targetCorrespondingSourceObject: {fileID: 2677073480137184581, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 502742841}
-    - targetCorrespondingSourceObject: {fileID: 386309538923513816, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 568437226}
-    - targetCorrespondingSourceObject: {fileID: 1904845972895188027, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 728741303}
-    - targetCorrespondingSourceObject: {fileID: 6168679769892162882, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 728871514}
-    - targetCorrespondingSourceObject: {fileID: 5127680699044867840, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1025014980}
-    - targetCorrespondingSourceObject: {fileID: 5076957465058695180, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1058110881}
-    - targetCorrespondingSourceObject: {fileID: 4417796470983587238, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1149246548}
-    - targetCorrespondingSourceObject: {fileID: 8375874257520570121, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1279565656}
-    - targetCorrespondingSourceObject: {fileID: 8588159637936406858, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1320489590}
-    - targetCorrespondingSourceObject: {fileID: 2680736448991127187, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1430085247}
-    - targetCorrespondingSourceObject: {fileID: 6310163870521673362, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1516599566}
-    - targetCorrespondingSourceObject: {fileID: 1303587701867209873, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1706053533}
-    - targetCorrespondingSourceObject: {fileID: 7449337613245362970, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1806734795}
-    - targetCorrespondingSourceObject: {fileID: 8697734616601764526, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1897395530}
-    - targetCorrespondingSourceObject: {fileID: 4596243187598871414, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2075618376}
-    - targetCorrespondingSourceObject: {fileID: 6654641841077160410, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2112178802}
-    - targetCorrespondingSourceObject: {fileID: 6532324570728341381, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 361407146}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff0c4b23084ccb7458ab1044f851ef32, type: 3}
 --- !u!4 &1567513920832013463
 Transform:
@@ -32048,31 +31671,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 620.9438
+      value: 709.00385
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5948868
+      value: 11.636551
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 221.13823
+      value: 184.07516
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9935986
+      value: 0.9971669
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08635164
+      value: 0.031421293
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.072564214
+      value: -0.068311155
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0063066017
+      value: 0.0021525172
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -32097,7 +31720,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3871806114245934126, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3107657977904102713, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 425260742}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 455638878362309095, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       insertIndex: -1
