@@ -24,31 +24,34 @@ public class ThrowBomb : MonoBehaviour
 
     public void Throw()
     {
-        readyToThrow = false;
-
-        // instantiate object to throw
-        GameObject projectile = Instantiate(objectToThrow, transform.position, cam.rotation);
-
-        // get rigidbody component
-        Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
-
-        // calculate direction
-        Vector3 forceDirection = cam.transform.forward;
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
+        if (readyToThrow)
         {
-            forceDirection = (hit.point - transform.position).normalized;
+            readyToThrow = false;
+
+            // instantiate object to throw
+            GameObject projectile = Instantiate(objectToThrow, transform.position, cam.rotation);
+
+            // get rigidbody component
+            Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+
+            // calculate direction
+            Vector3 forceDirection = cam.transform.forward;
+
+            RaycastHit hit;
+
+            if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
+            {
+                forceDirection = (hit.point - transform.position).normalized;
+            }
+
+            // add force
+            Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
+
+            projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+
+            // implement throwCooldown
+            Invoke(nameof(ResetThrow), throwCooldown);
         }
-
-        // add force
-        Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
-
-        projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
-
-        // implement throwCooldown
-        Invoke(nameof(ResetThrow), throwCooldown);
     }
 
     private void ResetThrow()
