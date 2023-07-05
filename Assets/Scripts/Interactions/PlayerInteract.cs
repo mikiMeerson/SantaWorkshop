@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    private Camera cam;
+    public Camera firstPersonCam;
 
     [SerializeField]
     private float distance = 3f;
@@ -13,34 +13,39 @@ public class PlayerInteract : MonoBehaviour
     private PlayerUI playerUI;
     private InputManager inputManager;
 
+    public bool isInteracting;
+
     void Start()
     {
-        cam = GetComponent<PlayerLook>().cam;
         playerUI = GetComponent<PlayerUI>();
         inputManager = GetComponent<InputManager>();
+        playerUI.UpdateText(string.Empty);
     }
 
     void Update()
     {
-        playerUI.UpdateText(string.Empty);
-
-        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction * distance);
-
-        RaycastHit hitInfo;
-        
-        if (Physics.Raycast(ray, out hitInfo, distance, mask))
+        if (isInteracting)
         {
-            if (hitInfo.collider.GetComponent<Interactable>() != null)
+            playerUI.UpdateText(string.Empty);
+
+            Ray ray = new Ray(firstPersonCam.transform.position, firstPersonCam.transform.forward);
+            RaycastHit hitInfo;
+
+            if (Physics.Raycast(ray, out hitInfo, distance, mask))
             {
-                Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
-                playerUI.UpdateText(interactable.promptMessage);
-                
-                if (inputManager.onFoot.Interact.triggered)
+                if (hitInfo.collider.GetComponent<Interactable>() != null)
                 {
-                    interactable.BaseInteract();
+                    Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
+                    playerUI.UpdateText(interactable.promptMessage);
+
+                    if (inputManager.onFoot.Interact.triggered)
+                    {
+                        interactable.BaseInteract();
+                    }
                 }
             }
         }
+        else
+            playerUI.UpdateText(string.Empty);
     }
 }

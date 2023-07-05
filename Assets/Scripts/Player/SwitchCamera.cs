@@ -9,10 +9,14 @@ public class SwitchCamera : MonoBehaviour
     public float transitionDuration = 0.5f;
 
     private Camera activeCamera;
+    private PlayerLook playerLook;
+    private PlayerInteract playerInteract;
 
     private void Start()
     {
-        SetActiveCamera(firstPersonCamera);
+        playerLook = GetComponent<PlayerLook>();
+        playerInteract = GetComponent<PlayerInteract>();
+        SetActiveCamera(thirdPersonCamera);
     }
 
     private void Update()
@@ -20,42 +24,40 @@ public class SwitchCamera : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (activeCamera == firstPersonCamera)
+            {
                 StartCoroutine(Switch(thirdPersonCamera, true));
+                playerInteract.isInteracting = false;
+            }
             else
+            {
                 StartCoroutine(Switch(firstPersonCamera, false));
+                playerInteract.isInteracting = true;
+            }
         }
     }
 
     private IEnumerator Switch(Camera newCamera, bool zoomIn)
     {
-        // Disable user input during the transition
         enabled = false;
 
-        // Calculate the target field of view based on the zoom direction
         float targetFieldOfView = zoomIn ? 60f : 1f;
 
-        // Smoothly adjust the field of view of the current camera
         while (activeCamera.fieldOfView > targetFieldOfView)
         {
             activeCamera.fieldOfView -= (Time.deltaTime / transitionDuration) * 100;
             yield return null;
         }
 
-        // Disable the current camera
         activeCamera.gameObject.SetActive(false);
 
-        // Enable the new camera
-        newCamera.gameObject.SetActive(true);
-        activeCamera = newCamera;
+        SetActiveCamera(newCamera);
 
-        // Smoothly adjust the field of view of the new camera
         while (activeCamera.fieldOfView < 60)
         {
             activeCamera.fieldOfView += (Time.deltaTime / transitionDuration) * 100;
             yield return null;
         }
 
-        // Enable user input after the transition
         enabled = true;
     }
 
@@ -63,5 +65,6 @@ public class SwitchCamera : MonoBehaviour
     {
         camera.gameObject.SetActive(true);
         activeCamera = camera;
+        playerLook.cam = activeCamera;
     }
 }
