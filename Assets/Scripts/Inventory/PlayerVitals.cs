@@ -10,12 +10,14 @@ public class PlayerVitals : MonoBehaviour
     public ProgressBar healthBar;
     public ProgressBar warmthBar;
 
-    private int healthAmount;
-    private int warmthAmount;
+    private int healthAmount = 90;
+    private int warmthAmount = 80;
 
     private void Awake()
     {
         instance = this;
+        healthBar.current = healthAmount;
+        warmthBar.current = warmthAmount;
     }
 
     public int GetHealthAmount()
@@ -36,5 +38,15 @@ public class PlayerVitals : MonoBehaviour
     public void IncreaseWarmth(int value)
     {
         warmthBar.current += value;
+    }
+
+    public void DecreaseHealth(int value)
+    {
+        healthBar.current -= value;
+    }
+
+    public void DecreaseWarmth(int value)
+    {
+        warmthBar.current -= value;
     }
 }
