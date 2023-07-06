@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: bfb9b28b61221df499e2545a90fad867
+  - enabled: 1
+    path: Assets/Scenes/SantaWorkshop.unity
+    guid: bcff7d2a36d092846abff37fd8553b0e
   m_configObjects: {}
