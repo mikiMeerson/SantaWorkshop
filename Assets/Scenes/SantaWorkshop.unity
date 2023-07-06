@@ -13698,9 +13698,9 @@ RectTransform:
   m_Father: {fileID: 933084344}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 24, y: 24}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -450, y: 50}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0, y: 0}
 --- !u!1001 &996076633
@@ -32619,6 +32619,10 @@ PrefabInstance:
     - target: {fileID: 455638878362309095, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175546444461923890, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_RootOrder
