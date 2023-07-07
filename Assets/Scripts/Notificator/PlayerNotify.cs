@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerNotify : MonoBehaviour
 {
+    public static PlayerNotify instance;
     private PlayerUI playerUI;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
