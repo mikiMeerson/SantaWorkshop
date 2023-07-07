@@ -2,4 +2,4 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Notificatable {}
+public class EnemyNotify : Notificatable {}

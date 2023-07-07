@@ -125,7 +125,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b4a7729be65438b459f536721809b440, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4a7729be65438b459f536721809b440, type: 3}
       propertyPath: m_LocalPosition.x
@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b4a7729be65438b459f536721809b440, type: 3}
       propertyPath: m_Name
-      value: elf1 Variant
+      value: elf1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b4a7729be65438b459f536721809b440, type: 3}
       propertyPath: m_Layer
@@ -294,9 +294,6 @@ PrefabInstance:
       addedObject: {fileID: 1574074458707461302}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4a7729be65438b459f536721809b440, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1330031423857541964}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4a7729be65438b459f536721809b440, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 579911502864809543}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4a7729be65438b459f536721809b440, type: 3}
       insertIndex: -1
@@ -331,19 +328,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1330031423857541964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2803611002140819741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3217498998c894c989e82877dc4a9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: An enemy has spotted you!
 --- !u!65 &579911502864809543
 BoxCollider:
   m_ObjectHideFlags: 0

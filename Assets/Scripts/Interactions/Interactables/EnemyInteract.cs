@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GiftPile : Interactable
+public class EnemyInteract : Interactable
 {
     protected override void Interact()
     {
