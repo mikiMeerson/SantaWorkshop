@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CinemachineTarget
   - Bullet
   - Gift
   - Ground
   - Enemy
+  - Weapon
   layers:
   - Default
   - TransparentFX

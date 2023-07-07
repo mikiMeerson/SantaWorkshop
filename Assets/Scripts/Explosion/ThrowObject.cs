@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ThrowBomb : MonoBehaviour
+public class ThrowObject : MonoBehaviour
 {
-    public static ThrowBomb instance;
+    public static ThrowObject instance;
     public GameObject objectToThrow;
     public Transform cam;
 
     public float throwCooldown = 2.0f;
 
-    public float throwForce = 50.0f;
-    public float throwUpwardForce = 10.0f;
+    public float throwForce;
+    public float throwUpwardForce;
 
     bool readyToThrow = false;
 

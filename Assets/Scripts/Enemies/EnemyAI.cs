@@ -9,8 +9,6 @@ public class EnemyAI : MonoBehaviour
     private Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public float health;
-
     // Patrolling
     public Vector3 walkPoint;
     private bool walkPointSet;
@@ -25,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     // States
     public float sightRange, attackRange;
     private bool playerInSightRange, playerInAttackRange;
+    private bool isFrozen;
 
     private void Awake()
     {
@@ -34,13 +33,16 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        // check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        if (!isFrozen)
+        {
+            // check for sight and attack range
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInSightRange && playerInAttackRange) AttackPlayer();
+            if (!playerInSightRange && !playerInAttackRange) Patrolling();
+            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+            if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        }
     }
 
     private void Patrolling()
@@ -95,22 +97,31 @@ public class EnemyAI : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
-    }
-
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
-    }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.tag == "Weapon")
+        {
+            Debug.Log("Weapon collision");
+            GetComponent<Animator>().SetBool("Frozen", true);
+            isFrozen = true;
+            agent.SetDestination(transform.position);
+
+            Invoke(nameof(ResetMovement), 10f);
+        }
+    }
+
+    private void ResetMovement()
+    {
+        GetComponent<Animator>().SetBool("Frozen", false);
+        isFrozen = false;
     }
 }
