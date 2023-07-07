@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Damage : MonoBehaviour
 {
-    const int ENEMY_DAMAGE = 10;
+    const int ENEMY_DAMAGE = 5;
 
     // Start is called before the first frame update
-    void OnTriggerEnter(Collider collider)
+    void OnCollisionEnter(Collision other)
     {
-        if (collider.CompareTag("Enemy"))
+        if (other.collider.CompareTag("Bullet"))
         {
             Debug.Log(PlayerVitals.instance.GetHealthAmount());
             if (PlayerVitals.instance.GetHealthAmount() <= ENEMY_DAMAGE)

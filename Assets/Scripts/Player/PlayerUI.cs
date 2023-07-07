@@ -24,13 +24,9 @@ public class PlayerUI : MonoBehaviour
     public void UpdateNotification(string notificationMessage)
     {
         if (notificationMessage == string.Empty)
-        {
-            Debug.Log("notificationMessage == string.Empty");
             isNotificationActive = false;
-        }
         else
         {
-            Debug.Log("else");
             notificationText.text = notificationMessage;
             isNotificationActive = true;
         }

@@ -45,6 +45,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Patrolling()
     {
+        Debug.Log(walkPointSet);
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet) agent.SetDestination(walkPoint);
