@@ -33,20 +33,24 @@ public class PlayerVitals : MonoBehaviour
     public void IncreaseHealth(int value)
     {
         healthBar.current += value;
+        healthAmount += value;
     }
 
     public void IncreaseWarmth(int value)
     {
         warmthBar.current += value;
+        warmthAmount += value;
     }
 
     public void DecreaseHealth(int value)
     {
         healthBar.current -= value;
+        healthAmount -= value;
     }
 
     public void DecreaseWarmth(int value)
     {
         warmthBar.current -= value;
+        warmthAmount -= value;
     }
 }

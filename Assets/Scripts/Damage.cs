@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Damage : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class Damage : MonoBehaviour
             Debug.Log(PlayerVitals.instance.GetHealthAmount());
             if (PlayerVitals.instance.GetHealthAmount() <= ENEMY_DAMAGE)
             {
-                //TODO GAME OVER
+                SceneManager.LoadScene("GameOverMenu");
             } else
                 PlayerVitals.instance.DecreaseHealth(ENEMY_DAMAGE);
         }
