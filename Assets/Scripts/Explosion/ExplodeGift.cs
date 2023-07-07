@@ -6,6 +6,8 @@ public class ExplodeGift : MonoBehaviour
 {
     public GameObject fracturedObject;
     public GameObject explosionVFX;
+    public GameObject minimapIcon;
+
     public float explosionMinForce = 5;
     public float exosionMaxForce = 100;
     public float explosionForceRadius = 10;
@@ -28,6 +30,7 @@ public class ExplodeGift : MonoBehaviour
         Instantiate(explosionVFX, transform.position, transform.rotation);
 
         gameObject.SetActive(false);
+        minimapIcon.SetActive(false);
 
         foreach (Transform t in fracObj.transform)
         {
