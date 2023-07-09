@@ -12,6 +12,8 @@ public class ItemPickUp : MonoBehaviour
         InventoryManager.Instance.Add(item);
         inventory.SetActive(false);
         Destroy(gameObject);
+
+        WinLevel.instance.CollectGoal();
     }
 
     public void OnTriggerEnter(Collider col)

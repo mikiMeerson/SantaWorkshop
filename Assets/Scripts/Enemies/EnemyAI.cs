@@ -107,10 +107,8 @@ public class EnemyAI : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Weapon")
         {
-            Debug.Log("Weapon collision");
             GetComponent<Animator>().SetBool("Frozen", true);
             isFrozen = true;
             agent.SetDestination(transform.position);

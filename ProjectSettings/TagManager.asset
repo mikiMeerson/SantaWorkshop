@@ -11,6 +11,7 @@ TagManager:
   - Weapon
   - Wall
   - Goal
+  - Pile
   layers:
   - Default
   - TransparentFX

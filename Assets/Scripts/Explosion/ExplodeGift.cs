@@ -16,9 +16,9 @@ public class ExplodeGift : MonoBehaviour
     private GameObject fracObj;
 
     // Update is called once per frame
-    public void OnCollisionEnter(Collision collision) // TODO change to trigger event from bomb
+    public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag != "Gift" && collision.gameObject.tag != "Ground")
+        if (collision.gameObject.tag != "Pile" && collision.gameObject.tag != "Ground")
         {
             Explode();
         }
@@ -41,5 +41,7 @@ public class ExplodeGift : MonoBehaviour
                 rb.AddExplosionForce(Random.Range(explosionMinForce, exosionMaxForce), transform.position, explosionForceRadius);
             }
         }
+
+        WinLevel.instance.DestroyGift();
     }
 }
