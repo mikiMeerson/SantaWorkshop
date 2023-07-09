@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4717546170798420024}
   m_Layer: 7
   m_Name: CompleteGift (3)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &1099583932970205877
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ GameObject:
   - component: {fileID: 2667158420025523750}
   m_Layer: 7
   m_Name: CompleteGift (7)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &1303587701867209873
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +312,7 @@ GameObject:
   - component: {fileID: 456104348705058738}
   m_Layer: 7
   m_Name: CompleteGift (21)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,6 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &1541817661732537905
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +455,7 @@ GameObject:
   - component: {fileID: 5227238795047979307}
   m_Layer: 7
   m_Name: ExplosiveGift (1)
-  m_TagString: Untagged
+  m_TagString: Gift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -641,6 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 7427343755604194312, guid: 685b42d0df31e9041ae38c2c8888e9ab, type: 3}
 --- !u!1 &1904845972895188027
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +661,7 @@ GameObject:
   - component: {fileID: 4677037676976902347}
   m_Layer: 7
   m_Name: CompleteGift (14)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,6 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &2228520278846618121
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +804,7 @@ GameObject:
   - component: {fileID: 6549569170904205630}
   m_Layer: 7
   m_Name: ExplosiveGift
-  m_TagString: Untagged
+  m_TagString: Gift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -832,7 +837,7 @@ GameObject:
   - component: {fileID: 5507885178061739180}
   m_Layer: 7
   m_Name: ExplosiveGift (2)
-  m_TagString: Untagged
+  m_TagString: Gift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -870,7 +875,7 @@ GameObject:
   - component: {fileID: 6809154409817179724}
   m_Layer: 7
   m_Name: CompleteGift (4)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1001,6 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &2680736448991127187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1023,7 @@ GameObject:
   - component: {fileID: 256097597189448534}
   m_Layer: 7
   m_Name: CompleteGift (1)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1148,6 +1154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &3138213772505874632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,6 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 7427343755604194312, guid: 685b42d0df31e9041ae38c2c8888e9ab, type: 3}
 --- !u!1 &4417796470983587238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1339,7 @@ GameObject:
   - component: {fileID: 3368159999442537658}
   m_Layer: 7
   m_Name: CompleteGift (9)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1462,6 +1470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &4596243187598871414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1487,7 @@ GameObject:
   - component: {fileID: 220223278830006109}
   m_Layer: 7
   m_Name: CompleteGift (5)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1609,6 +1618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &4724516051516220761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1803,7 @@ GameObject:
   - component: {fileID: 6739237127949848011}
   m_Layer: 7
   m_Name: CompleteGift (6)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1924,6 +1934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &5398275198277014127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,7 +1951,7 @@ GameObject:
   - component: {fileID: 5864049185706654819}
   m_Layer: 7
   m_Name: CompleteGift
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2071,6 +2082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &5965472178580338212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2099,7 @@ GameObject:
   - component: {fileID: 5226405225002562949}
   m_Layer: 7
   m_Name: CompleteGift (12)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2218,6 +2230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &6310163870521673362
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,7 +2247,7 @@ GameObject:
   - component: {fileID: 3824750711268168947}
   m_Layer: 7
   m_Name: CompleteGift (22)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2365,6 +2378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &6654641841077160410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,7 +2395,7 @@ GameObject:
   - component: {fileID: 3649824417258564947}
   m_Layer: 7
   m_Name: CompleteGift (11)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2512,6 +2526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &7449337613245362970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,7 +2543,7 @@ GameObject:
   - component: {fileID: 137284642081005348}
   m_Layer: 7
   m_Name: CompleteGift (13)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2659,6 +2674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &7943724847911437308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,7 +2775,7 @@ GameObject:
   - component: {fileID: 8124457198356428879}
   m_Layer: 7
   m_Name: CompleteGift (15)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2890,6 +2906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &8588159637936406858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,7 +2923,7 @@ GameObject:
   - component: {fileID: 746324321081389545}
   m_Layer: 7
   m_Name: CompleteGift (8)
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3037,6 +3054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 0}
 --- !u!1 &8697734616601764526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3204,6 +3222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Shoot a bomb [E]
+  bomb: {fileID: 7427343755604194312, guid: 685b42d0df31e9041ae38c2c8888e9ab, type: 3}
 --- !u!1 &8946527591895786463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3234,7 @@ GameObject:
   - component: {fileID: 4836934109044903758}
   m_Layer: 7
   m_Name: giftPile
-  m_TagString: Gift
+  m_TagString: Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3227,7 +3246,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8946527591895786463}
-  m_LocalRotation: {x: -0, y: -0.30732092, z: -0, w: 0.951606}
+  m_LocalRotation: {x: 0, y: -0.3073233, z: 0, w: 0.9516052}
   m_LocalPosition: {x: 173.62671, y: 0, z: -245.03325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
