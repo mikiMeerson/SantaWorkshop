@@ -12,7 +12,7 @@ public class Damage : MonoBehaviour
     {
         if (other.collider.CompareTag("Bullet"))
         {
-            if (PlayerVitals.instance.GetHealthAmount() <= ENEMY_DAMAGE)
+            if (GameData.healthAmount <= ENEMY_DAMAGE)
                 SceneManager.LoadScene("GameOverMenu");
             else
                 PlayerVitals.instance.DecreaseHealth(ENEMY_DAMAGE);

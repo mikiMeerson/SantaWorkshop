@@ -41,7 +41,5 @@ public class ExplodeGift : MonoBehaviour
                 rb.AddExplosionForce(Random.Range(explosionMinForce, exosionMaxForce), transform.position, explosionForceRadius);
             }
         }
-
-        WinLevel.instance.DestroyGift();
     }
 }

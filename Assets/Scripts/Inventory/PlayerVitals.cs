@@ -10,47 +10,41 @@ public class PlayerVitals : MonoBehaviour
     public ProgressBar healthBar;
     public ProgressBar warmthBar;
 
-    private int healthAmount = 90;
-    private int warmthAmount = 80;
-
     private void Awake()
     {
         instance = this;
-        healthBar.current = healthAmount;
-        warmthBar.current = warmthAmount;
-    }
 
-    public int GetHealthAmount()
-    {
-        return healthAmount;
-    }
-
-    public int GetWarmthAmount()
-    {
-        return warmthAmount;
+        if (GameData.healthAmount == 0 || GameData.warmthAmount == 0)
+        {
+            GameData.healthAmount = 100;
+            GameData.warmthAmount = 90;
+        }
+            
+        healthBar.current = GameData.healthAmount;
+        warmthBar.current = GameData.warmthAmount;
     }
 
     public void IncreaseHealth(int value)
     {
         healthBar.current += value;
-        healthAmount += value;
+        GameData.healthAmount += value;
     }
 
     public void IncreaseWarmth(int value)
     {
         warmthBar.current += value;
-        warmthAmount += value;
+        GameData.warmthAmount += value;
     }
 
     public void DecreaseHealth(int value)
     {
         healthBar.current -= value;
-        healthAmount -= value;
+        GameData.healthAmount -= value;
     }
 
     public void DecreaseWarmth(int value)
     {
         warmthBar.current -= value;
-        warmthAmount -= value;
+        GameData.warmthAmount -= value;
     }
 }
