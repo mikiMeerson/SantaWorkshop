@@ -684,6 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Freeze [E]
   freezePotion: {fileID: 8364370575272622059, guid: 89970576c62faf646a270488de3a08c1, type: 3}
+  freezePotionItem: {fileID: 11400000, guid: a232c7d22f1d06d4a86d9c076b32401e, type: 2}
 --- !u!65 &5204390544563638373
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ public class PlayerNotify : MonoBehaviour
     {
         playerUI = GetComponent<PlayerUI>();
         playerUI.UpdateText(string.Empty);
+
+        playerUI.UpdateNotification("Discover abilities [Tab]");
+        StartCoroutine(TimeoutNotify());
     }
 
     private void OnTriggerEnter(Collider collider)

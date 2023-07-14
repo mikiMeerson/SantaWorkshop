@@ -14,11 +14,7 @@ public class ItemPickUp : MonoBehaviour
         inventory.SetActive(false);
         Destroy(gameObject);
 
-        if (item.itemType == Item.ItemType.FreezePotion)
-        {
-            GameData.freezePotions++;
-            Debug.Log(GameData.freezePotions);
-        }
+        if (item.itemType == Item.ItemType.FreezePotion) GameData.freezePotions++;
     }
 
     public void OnTriggerEnter(Collider col)

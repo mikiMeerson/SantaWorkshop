@@ -7,7 +7,6 @@ public class Damage : MonoBehaviour
 {
     const int ENEMY_DAMAGE = 5;
 
-    // Start is called before the first frame update
     void OnCollisionEnter(Collision other)
     {
         if (other.collider.CompareTag("Bullet"))

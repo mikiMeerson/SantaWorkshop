@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerUIItems : MonoBehaviour
+public class UIItems : MonoBehaviour
 {
     public TextMeshProUGUI freezePotionsText;
 

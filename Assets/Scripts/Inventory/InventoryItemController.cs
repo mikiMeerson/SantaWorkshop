@@ -48,18 +48,4 @@ public class InventoryItemController : MonoBehaviour
         }
 
     }
-
-    public void UseItem(Item item)
-    {
-        switch (item.itemType)
-        {
-            case Item.ItemType.FreezePotion:
-                GameData.freezePotions--;
-                RemoveItem();
-                break;
-            default:
-                break;
-        }
-
-    }
 }

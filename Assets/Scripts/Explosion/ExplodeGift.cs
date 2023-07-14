@@ -31,6 +31,7 @@ public class ExplodeGift : MonoBehaviour
 
         gameObject.SetActive(false);
         minimapIcon.SetActive(false);
+        GameData.giftsToExplode--;
 
         foreach (Transform t in fracObj.transform)
         {

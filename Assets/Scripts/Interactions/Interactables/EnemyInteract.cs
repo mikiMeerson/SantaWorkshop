@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyInteract : Interactable
 {
     public GameObject freezePotion;
-    public Item freezePotionItem;
 
     protected override void Interact()
     {
@@ -16,11 +15,8 @@ public class EnemyInteract : Interactable
             ThrowObject.instance.throwForce = 25f;
             ThrowObject.instance.throwUpwardForce = 5f;
 
-            InventoryItemController.instance.UseItem(freezePotionItem);
+            GameData.freezePotions--;
             ThrowObject.instance.Throw();
-        } else
-        {
-            promptMessage = "You do not have any freeze potions!";
-        }
+        } else  promptMessage = "You do not have any freeze potions!";
     }
 }
