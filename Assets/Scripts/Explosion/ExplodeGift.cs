@@ -14,12 +14,15 @@ public class ExplodeGift : MonoBehaviour
     public float fragScaleFactor = 1;
 
     private GameObject fracObj;
+    private bool didCollide = false;
 
-    // Update is called once per frame
-    public void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag != "Pile" && collision.gameObject.tag != "Ground")
+        Debug.Log(didCollide);
+
+        if (collision.gameObject.tag != "Pile" && collision.gameObject.tag != "Ground" && !didCollide)
         {
+            didCollide = true;
             Explode();
         }
     }
@@ -31,7 +34,6 @@ public class ExplodeGift : MonoBehaviour
 
         gameObject.SetActive(false);
         minimapIcon.SetActive(false);
-        GameData.giftsToExplode--;
 
         foreach (Transform t in fracObj.transform)
         {
@@ -42,5 +44,7 @@ public class ExplodeGift : MonoBehaviour
                 rb.AddExplosionForce(Random.Range(explosionMinForce, exosionMaxForce), transform.position, explosionForceRadius);
             }
         }
+
+        GameData.giftsToExplode--;
     }
 }
