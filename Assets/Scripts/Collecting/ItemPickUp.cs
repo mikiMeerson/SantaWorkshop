@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
+    public static ItemPickUp instance;
     public Item item;
     public GameObject inventory;
 
@@ -12,6 +13,8 @@ public class ItemPickUp : MonoBehaviour
         InventoryManager.Instance.Add(item);
         inventory.SetActive(false);
         Destroy(gameObject);
+
+        if (item.itemType == Item.ItemType.FreezePotion) GameData.freezePotions++;
     }
 
     public void OnTriggerEnter(Collider col)

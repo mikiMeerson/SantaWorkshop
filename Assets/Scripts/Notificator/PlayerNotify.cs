@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class PlayerNotify : MonoBehaviour
 {
+    public static PlayerNotify instance;
     private PlayerUI playerUI;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
         playerUI = GetComponent<PlayerUI>();
         playerUI.UpdateText(string.Empty);
+
+        playerUI.UpdateNotification("Discover abilities [Tab]");
+        StartCoroutine(TimeoutNotify());
     }
 
     private void OnTriggerEnter(Collider collider)

@@ -5,8 +5,15 @@ using UnityEngine.UI;
 
 public class InventoryItemController : MonoBehaviour
 {
+    public static InventoryItemController instance;
+
     Item item;
     public Button removeButton;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     public void RemoveItem()
     {
@@ -23,26 +30,18 @@ public class InventoryItemController : MonoBehaviour
         switch(item.itemType)
         {
             case Item.ItemType.EnergyPotion:
-                if (PlayerVitals.instance.GetHealthAmount() <= 90)
+                if (GameData.healthAmount < 100)
                 {
                     PlayerVitals.instance.IncreaseHealth(10);
                     RemoveItem();
                 }
                 break;
             case Item.ItemType.WarmthPotion:
-                if (PlayerVitals.instance.GetWarmthAmount() <= 90)
+                if (GameData.warmthAmount < 100)
                 {
                     PlayerVitals.instance.IncreaseWarmth(10);
                     RemoveItem();
                 }
-                break;
-            case Item.ItemType.FreezePotion:
-                break;
-            case Item.ItemType.CandyCane:
-                break;
-            case Item.ItemType.GingerBread:
-                break;
-            case Item.ItemType.Lolipop:
                 break;
             default:
                 break;
