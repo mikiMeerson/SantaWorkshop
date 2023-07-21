@@ -7,26 +7,44 @@ public class PlayerVitals : MonoBehaviour
 {
     public static PlayerVitals instance;
 
-    public int health;
-    public int warmth;
-
-    public TextMeshProUGUI healthText;
-    public TextMeshProUGUI warmthText;
+    public ProgressBar healthBar;
+    public ProgressBar warmthBar;
 
     private void Awake()
     {
         instance = this;
+
+        if (GameData.healthAmount == 0 || GameData.warmthAmount == 0)
+        {
+            GameData.healthAmount = 100;
+            GameData.warmthAmount = 90;
+        }
+            
+        healthBar.current = GameData.healthAmount;
+        warmthBar.current = GameData.warmthAmount;
     }
 
     public void IncreaseHealth(int value)
     {
-        health += value;
-        healthText.text = $"Health: {health}";
+        healthBar.current += value;
+        GameData.healthAmount += value;
     }
 
     public void IncreaseWarmth(int value)
     {
-        warmth += value;
-        warmthText.text = $"Warmth: {warmth}";
+        warmthBar.current += value;
+        GameData.warmthAmount += value;
+    }
+
+    public void DecreaseHealth(int value)
+    {
+        healthBar.current -= value;
+        GameData.healthAmount -= value;
+    }
+
+    public void DecreaseWarmth(int value)
+    {
+        warmthBar.current -= value;
+        GameData.warmthAmount -= value;
     }
 }

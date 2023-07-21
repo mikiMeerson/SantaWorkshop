@@ -4,22 +4,26 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CinemachineTarget
   - Bullet
   - Gift
   - Ground
+  - Enemy
+  - Weapon
+  - Wall
+  - Goal
+  - Pile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
+  - Notificatable
+  - Interactable
   - PostProcessing
-  - 
-  - 
+  - Minimap
+  - Player
   - 
   - 
   - 

@@ -6,18 +6,23 @@ public class ExplodeGift : MonoBehaviour
 {
     public GameObject fracturedObject;
     public GameObject explosionVFX;
+    public GameObject minimapIcon;
+
     public float explosionMinForce = 5;
     public float exosionMaxForce = 100;
     public float explosionForceRadius = 10;
     public float fragScaleFactor = 1;
 
     private GameObject fracObj;
+    private bool didCollide = false;
 
-    // Update is called once per frame
-    public void OnCollisionEnter(Collision collision) // TODO change to trigger event from bomb
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag != "Gift" && collision.gameObject.tag != "Ground")
+        Debug.Log(didCollide);
+
+        if (collision.gameObject.tag != "Pile" && collision.gameObject.tag != "Ground" && !didCollide)
         {
+            didCollide = true;
             Explode();
         }
     }
@@ -28,6 +33,7 @@ public class ExplodeGift : MonoBehaviour
         Instantiate(explosionVFX, transform.position, transform.rotation);
 
         gameObject.SetActive(false);
+        minimapIcon.SetActive(false);
 
         foreach (Transform t in fracObj.transform)
         {
@@ -38,5 +44,7 @@ public class ExplodeGift : MonoBehaviour
                 rb.AddExplosionForce(Random.Range(explosionMinForce, exosionMaxForce), transform.position, explosionForceRadius);
             }
         }
+
+        GameData.giftsToExplode--;
     }
 }
