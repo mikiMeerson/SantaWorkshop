@@ -970,7 +970,7 @@ RectTransform:
   - {fileID: 210257262}
   - {fileID: 1354535937}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1227,7 +1227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947823970
 GameObject:
@@ -2659,7 +2659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1754080013934616045, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       propertyPath: m_LocalScale.x
@@ -3007,69 +3007,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1523281545
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 23.77224
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.937973
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -34.75114
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504088731119818784, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2993662039647634074, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
-      propertyPath: m_Name
-      value: baileys3 Variant
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3016f67246b34064ba73ec21a5e42001, type: 3}
 --- !u!1 &1533254334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3618,8 +3557,8 @@ MonoBehaviour:
   - {fileID: 9023645670642324527, guid: 0b22d13e5623ed24e9e688e87e283704, type: 3}
   - {fileID: 7204643305855785828, guid: 9a39841bf67a966488343ec793287653, type: 3}
   - {fileID: 3066510238717858562, guid: 21fab2eaeb090a9468b9f4c833bacc64, type: 3}
-  minSpawnDelay: 0.25
-  maxSpawnDelay: 1
+  minSpawnDelay: 2
+  maxSpawnDelay: 5
   minAngle: -15
   maxAngle: 15
   minForce: 18
@@ -3637,7 +3576,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097202467
 GameObject:
