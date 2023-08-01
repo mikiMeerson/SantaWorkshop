@@ -49,9 +49,13 @@ public class BottleSpawner : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0f, 0f, Random.Range(minAngle, maxAngle));
 
             GameObject bottle = Instantiate(prefab, position, rotation);
+            Rigidbody bottleRigidbody = bottle.GetComponent<Rigidbody>();
 
             float force = Random.Range(minForce, maxForce);
-            bottle.GetComponent<Rigidbody>().AddForce(bottle.transform.up * force, ForceMode.Impulse);
+            bottleRigidbody.AddForce(bottle.transform.up * force, ForceMode.Impulse);
+
+            float rotationalForce = Random.Range(100f, 300f);
+            bottleRigidbody.AddTorque(bottle.transform.right * rotationalForce, ForceMode.Impulse);
 
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
         }

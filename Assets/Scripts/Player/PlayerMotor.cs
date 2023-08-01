@@ -18,6 +18,12 @@ public class PlayerMotor : MonoBehaviour
 
     private bool sprinting;
 
+    private bool shooting;
+    public bool isShootingEnabled = false;
+    public GameObject bulletPrefab;
+    public GameObject bulletSpawnPoint;
+    private float bulletSpeed = 2000f;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -81,5 +87,14 @@ public class PlayerMotor : MonoBehaviour
             speed = 8;
         else
             speed = 5;
+    }
+
+    public void Shoot()
+    {
+        if (isShootingEnabled)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation);
+            bullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.transform.forward * bulletSpeed);
+        }
     }
 }
