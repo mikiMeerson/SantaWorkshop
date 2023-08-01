@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyStealth : MonoBehaviour
 {
+    public Animator animator;
     public Transform pathHolder;
     public float speed = 5;
     public float waitTime = .3f;
@@ -34,6 +35,7 @@ public class EnemyStealth : MonoBehaviour
             waypoints[i] = new Vector3(waypoints[i].x, transform.position.y, waypoints[i].z);
         }
 
+        animator.SetBool("isWalking", true);
         StartCoroutine(FollowPath(waypoints));
     }
 
@@ -73,6 +75,7 @@ public class EnemyStealth : MonoBehaviour
 
     IEnumerator TurnToFace(Vector3 lookTarget)
     {
+        animator.SetBool("isWalking", false);
         Vector3 directionToLook = (lookTarget - transform.position).normalized;
         float targetAngle = 90 - Mathf.Atan2(directionToLook.z, directionToLook.x) * Mathf.Rad2Deg;
 
@@ -82,6 +85,8 @@ public class EnemyStealth : MonoBehaviour
             transform.eulerAngles = Vector3.up * angle;
             yield return null;
         }
+        
+        animator.SetBool("isWalking", true);
     }
 
 
