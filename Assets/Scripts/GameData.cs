@@ -5,4 +5,5 @@ public static class GameData
     public static int warmthAmount { get; set; }
     public static int freezePotions { get; set; }
     public static int giftsToExplode { get; set; }
+    public static int bottleMisses { get; set; }
 }
