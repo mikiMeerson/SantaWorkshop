@@ -8,9 +8,6 @@ using Unity.MLAgents.Sensors;
 public class MoveToGoalAgent : Agent
 {
     [SerializeField] private Transform targetTransform;
-    //[SerializeField] private Material winMaterial;
-    //[SerializeField] private Material loseMaterial;
-    //[SerializeField] private MeshRenderer floorMeshRenderer;
 
     public override void OnEpisodeBegin()
     {
@@ -44,12 +41,10 @@ public class MoveToGoalAgent : Agent
         if (other.gameObject.tag == "Goal")
         {
             SetReward(1f);
-            // floorMeshRenderer.material = winMaterial;
             EndEpisode();
         } else if (other.gameObject.tag == "Wall")
         {
             SetReward(-1f);
-            // floorMeshRenderer.material = loseMaterial;
             transform.localPosition = new Vector3(Random.Range(-10, 16), 8, Random.Range(-16, 13));
             EndEpisode();
         }
