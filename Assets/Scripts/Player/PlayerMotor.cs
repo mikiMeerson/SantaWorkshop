@@ -27,6 +27,7 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        GameData.bottleMisses = 0;
     }
 
     void Update()

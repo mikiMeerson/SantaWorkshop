@@ -25,8 +25,7 @@ public class Bottle : MonoBehaviour
                 { 
                     missesText = missesTransform.GetComponentInChildren<TextMeshProUGUI>();
 
-                    if (missesText != null) Debug.Log("Found TextMeshPro: " + missesText.text);
-                    else  Debug.LogError("TextMeshPro component not found under Misses.");
+                    if (missesText == null) Debug.LogError("TextMeshPro component not found under Misses.");
                 }
                 else  Debug.LogError("Misses transform not found under Stats.");
             }
@@ -45,6 +44,7 @@ public class Bottle : MonoBehaviour
 
         } else if (collision.gameObject.CompareTag("Ground"))
         {
+            Destroy(gameObject);
             GameData.bottleMisses++;
 
             if (missesText != null) missesText.text = GameData.bottleMisses.ToString() + "/10";

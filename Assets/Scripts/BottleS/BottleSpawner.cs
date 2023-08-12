@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BottleSpawner : MonoBehaviour
 {
@@ -17,6 +20,9 @@ public class BottleSpawner : MonoBehaviour
     public float minForce = 18f;
     public float maxForce = 22f;
 
+    private int bottlesAmount = 15;
+    public TextMeshProUGUI bottlesText;
+    
     private void Awake()
     {
         spawnArea = GetComponent<Collider>();
@@ -38,6 +44,10 @@ public class BottleSpawner : MonoBehaviour
 
         while (enabled)
         {
+            bottlesAmount -= 1;
+            bottlesText.text = bottlesAmount.ToString();
+
+            if (bottlesAmount == 0) SceneManager.LoadScene("VictoryMenu");
 
             GameObject prefab = bottlePrefabs[Random.Range(0, bottlePrefabs.Length)];
 
@@ -56,6 +66,7 @@ public class BottleSpawner : MonoBehaviour
 
             float rotationalForce = Random.Range(100f, 300f);
             bottleRigidbody.AddTorque(bottle.transform.right * rotationalForce, ForceMode.Impulse);
+
 
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
         }
