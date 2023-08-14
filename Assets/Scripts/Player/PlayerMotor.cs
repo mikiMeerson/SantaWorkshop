@@ -8,6 +8,7 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 playerVelocity;
     private bool isGrounded;
 
+    public Animator animator;
     public float speed = 5f;
     public float gravity = -9.8f;
     public float jumpHeight = 1.5f;
@@ -34,6 +35,9 @@ public class PlayerMotor : MonoBehaviour
     {
         isGrounded = controller.isGrounded;
 
+        if (animator.GetBool("isJumping") && isGrounded && playerVelocity.y <= 0)
+            animator.SetBool("isJumping", false);
+        
         if (lerpCrouch)
         {
             crouchTimer += Time.deltaTime;
@@ -70,8 +74,10 @@ public class PlayerMotor : MonoBehaviour
 
     public void Jump()
     {
-        if (isGrounded)
+        if (isGrounded) {
+            animator.SetBool("isJumping", true);
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+        }
     }
 
     public void Crouch()
@@ -84,6 +90,8 @@ public class PlayerMotor : MonoBehaviour
     public void Sprint()
     {
         sprinting = !sprinting;
+        animator.SetBool("isRunning", sprinting);
+
         if (sprinting)
             speed = 8;
         else
