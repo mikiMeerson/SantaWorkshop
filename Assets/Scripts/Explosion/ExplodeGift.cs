@@ -18,8 +18,6 @@ public class ExplodeGift : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(didCollide);
-
         if (collision.gameObject.tag != "Pile" && collision.gameObject.tag != "Ground" && !didCollide)
         {
             didCollide = true;
