@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7430d3003f9b8e4c87ba9757378e68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptMessage: Freeze Santa to buy some time!
+  promptMessage: Freeze Santa! [E]
   freezePotion: {fileID: 8364370575272622059, guid: 89970576c62faf646a270488de3a08c1, type: 3}
 --- !u!1 &565916379
 GameObject:
@@ -1017,23 +1017,6 @@ RectTransform:
   m_AnchoredPosition: {x: 823, y: 359}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &728573529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 455638878362309095, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
-  m_PrefabInstance: {fileID: 859629388}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &728573540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728573529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7e61ede2bcd7c479c1a4a954d24654, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &799979010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,10 +1334,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2940454441463136322, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1835257027}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 455638878362309095, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 728573540}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cc8e52e02a46f942bf8070c9d805d91, type: 3}
 --- !u!4 &859629389 stripped
 Transform:
