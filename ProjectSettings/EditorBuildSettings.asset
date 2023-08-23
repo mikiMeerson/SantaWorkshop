@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: bfb9b28b61221df499e2545a90fad867
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 8290c6e5966a0f69bb989c5194e259d3
+  - enabled: 1
     path: Assets/Scenes/SantaWorkshop.unity
     guid: bcff7d2a36d092846abff37fd8553b0e
   - enabled: 1

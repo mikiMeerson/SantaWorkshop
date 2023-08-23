@@ -19,13 +19,17 @@ public class UIGoal : MonoBehaviour
             if (gift.activeSelf)
                 activeGiftsToExplode++;
         }
-
         GameData.giftsToExplode = activeGiftsToExplode;
     }
 
     void Update()
     {
-        if (GameData.giftsToExplode == 0) SceneManager.LoadScene("Boss");
+        if (
+            GameData.giftsToExplode == 0 &&
+            SceneManager.GetActiveScene().name == "SantaWorkshop" 
+        ) {
+            SceneManager.LoadScene("Boss");
+        }
         else giftsText.text = GameData.giftsToExplode.ToString();
     }
 }
