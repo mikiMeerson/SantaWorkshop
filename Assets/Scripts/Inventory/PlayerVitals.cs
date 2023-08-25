@@ -12,7 +12,7 @@ public class PlayerVitals : MonoBehaviour
 
     private void Awake()
     {
-        if (healthBar != null && warmthBar != null)
+        if (healthBar != null)
         {
             instance = this;
 
@@ -23,7 +23,6 @@ public class PlayerVitals : MonoBehaviour
             }
 
             healthBar.current = GameData.healthAmount;
-            warmthBar.current = GameData.warmthAmount;
         }
     }
 
